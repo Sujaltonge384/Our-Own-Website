@@ -154,6 +154,7 @@ form textarea { resize: none; }
   display: inline-block;
   transition: all 0.3s;
   font-weight: 500;
+  margin-top: 20px;
 }
 .btn:hover {
   background: #fff;
@@ -168,3 +169,158 @@ footer {
   padding: 1.5rem;
   color: #888;
 }
+
+
+/* =========================
+   FESTAURA THEME — LIGHT APRICOT ICE PALETTE
+   Pale Gold:   #D9B98A
+   Copper:      #D18A6C
+   Cappuccino:  #7A554D
+   Picante:     #A8574A
+   OrangeOchre: #F19964
+   Chanterelle: #A78974
+   Apricot Ice: #FFD9B3
+   White Swan:  #F4ECE1
+   ========================= */
+
+:root {
+  --pale-gold: #D9B98A;
+  --copper: #D18A6C;
+  --cappuccino: #7A554D;
+  --picante: #A8574A;
+  --orange-ochre: #F19964;
+  --chanterelle: #A78974;
+  --apricot-ice: #FFD9B3;
+  --white-swan: #F4ECE1;
+
+  --text-dark: #5B3A33;   /* cappuccino */
+  --text-light: #fff;
+}
+
+/* ===== Base ===== */
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:'Poppins',sans-serif;
+  color:var(--text-dark);
+  background: var(--white-swan);
+  line-height:1.6;
+}
+h1,h2,h3{font-family:'Playfair Display',serif;margin:0;color:#380d05}
+a{text-decoration:none}
+
+/* ===== Navbar ===== */
+.navbar{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:1rem 3rem;position:sticky;top:0;z-index:1000;
+  background: rgb(202, 179, 156);
+  border-bottom:1px solid var(--pale-gold);
+}
+.logo{font-size:1.5rem;font-weight:700;color:var(--text-dark)}
+.logo span{color:#5b3a33}
+.nav-links{list-style:none;display:flex;gap:2rem}
+.nav-links a{color:var(--cappuccino);font-weight:500;transition:color .25s}
+.nav-links a:hover{color:var(--picante)}
+
+/* ===== Hero ===== */
+.hero{
+  height:100vh; position:relative; display:flex;align-items:center;justify-content:center;
+  background:url('https://images.unsplash.com/photo-1600185365483-26d0f0aa4f1e') center/cover no-repeat;
+}
+.overlay{position:absolute;inset:0;background:rgb(255, 247, 239)} /* apricot veil */
+.hero-content{position:relative;text-align:center;max-width:900px;padding:0 1rem;color:var(--text-dark)}
+.hero-content h1{font-size:3.4rem;margin-bottom:1rem;color:var(--picante)}
+.hero-content p{font-size:1.15rem;color:var(--cappuccino)}
+
+/* ===== Sections ===== */
+.section{padding:4rem 2rem;text-align:center}
+.section-light{background:var(--apricot-ice);color:var( --apricot-ice)}
+.section-dark{background:var(--chanterelle);color:var(--text-light)}
+.section-title{font-size:2.4rem;margin-bottom:2rem;color:#f4ece1}
+
+/* ===== Categories ===== */
+.category-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem
+}
+.category-card{
+  background: var(--white-swan);
+  border:1px solid var(--pale-gold);
+  border-radius:14px;padding:3rem 1rem;font-size:1.25rem;color:var(--text-dark);
+  transition:transform .25s, box-shadow .25s;
+}
+.category-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 8px 20px rgba(217,185,138,0.3);
+}
+
+/* ===== Products ===== */
+.product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem}
+.product-card{
+  background: var(--white-swan);
+  border:1px solid var(--pale-gold);
+  border-radius:14px;padding:1rem;transition:transform .25s, box-shadow .25s;
+}
+.product-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 12px 24px rgba(241,153,100,0.3); /* orange glow */
+}
+.product-card img{width:100%;border-radius:12px}
+.product-card h3{margin:1rem 0 .4rem;color:var(--cappuccino)}
+.product-card p{color:var(--picante);font-weight:600}
+
+/* ===== About ===== */
+.about-text{
+  max-width:760px;margin:0 auto;
+  background:var(--apricot-ice);
+  border:1px solid var(--pale-gold);
+  padding:1.25rem 1rem;border-radius:12px;color:var(--cappuccino)
+}
+
+/* ===== Contact ===== */
+form{max-width:520px;margin:2rem auto 0;display:flex;flex-direction:column;gap:1rem}
+form input, form textarea{
+  padding:1rem;border:1px solid var(--pale-gold);border-radius:10px;font-size:1rem;
+  background:var(--white-swan);color:var(--cappuccino)
+}
+form textarea{resize:none}
+
+/* ===== Buttons ===== */
+.btn{
+  background:#5b3a33; color:#fff; padding:.75rem 1.6rem; border-radius:30px;
+  display:inline-block; font-weight:600; transition:transform .2s, box-shadow .25s, background .25s
+}
+.btn:hover{
+  background:var(--picante);
+  box-shadow:0 0 14px rgba(168,87,74,0.3);
+  transform:translateY(-2px)
+}
+
+/* ===== Footer ===== */
+footer{
+  background: var(--copper);
+  text-align:center;padding:1.5rem;color:#fff;
+  border-top:1px solid var(--pale-gold)
+}
+
+/* ===== Responsive ===== */
+@media (max-width:900px){
+  .hero-content h1{font-size:2.6rem}
+  .navbar{padding:0.85rem 1.25rem}
+}
+
+
+
+.logo {
+  display: flex;
+  align-items: center;   /* Aligns text & image vertically */
+  gap: 8px;              /* Space between logo and text */
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: bold;
+  color: #5B3A33; /* Cappuccino shade */
+}
+.logo img {
+  height: 80px;   /* Increase logo height */
+  width: auto;    /* Keeps aspect ratio */
+  object-fit: contain;
+}
+
